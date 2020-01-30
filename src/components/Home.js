@@ -4,7 +4,7 @@ import { Card, CardContent, CardActions, Divider } from "@material-ui/core";
 import cars from "../cars.json";
 
 const Home = () => {
-  console.log("CARS", cars);
+  // console.log("CARS", cars);
   return (
     <div className="card-container">
       {cars.map((car, idx) => (
@@ -20,9 +20,13 @@ const Home = () => {
           </CardContent>
           <Divider />
           <CardActions style={{ color: "mediumblue" }}>
-            <Link to={{
-              pathname: `/car/${car.id}`
-            }}>See more Details</Link>
+            <Link
+              to={{
+                pathname: `/car/${car.id}`
+              }}
+            >
+              See more Details
+            </Link>
           </CardActions>
         </Card>
       ))}
