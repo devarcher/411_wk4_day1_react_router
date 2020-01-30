@@ -1,21 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter } from "react-router-dom";
 
 import "./index.css";
-import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 
-import Router from './Router';
-import Navigation from './components/Navigation';
+import Router from "./Router";
+import Navigation from "./components/Navigation";
 
 const Main = () => (
   <BrowserRouter>
     <Navigation />
     <Router />
   </BrowserRouter>
-)
-
+);
 
 ReactDOM.render(<Main />, document.getElementById("root"));
 
