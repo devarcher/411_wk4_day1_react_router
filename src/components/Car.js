@@ -3,7 +3,20 @@ import cars from "../cars.json";
 import { Container, Paper, Chip } from "@material-ui/core";
 
 const Car = props => {
-  return <h1>A specific car</h1>;
+  const id = parseInt(props.match.params.id);
+  const car = cars.filter(car => car.id === id);
+
+  return (
+    <div>
+      <ul>
+        {Object.entries(...car).map(([key, value], index) => (
+          <li key={index}>
+            {key} : {value}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
 };
 
 export default Car;
