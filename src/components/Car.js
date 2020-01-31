@@ -9,11 +9,15 @@ const Car = props => {
   return (
     <div>
       <ul>
-        {Object.entries(...car).map(([key, value], index) => (
-          <li key={index}>
-            {key} : {value}
-          </li>
-        ))}
+        <Container>
+          <Paper>
+            {Object.entries(...car).map(([key, value], index) => (
+              <li key={index}>
+            <Chip label={`${key}: ${value}`}/>
+              </li>
+            ))}
+          </Paper>
+        </Container>
       </ul>
     </div>
   );
