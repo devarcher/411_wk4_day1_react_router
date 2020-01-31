@@ -42,3 +42,24 @@ ul {
 .car-paper {
   padding: 50px;
 }
+
+/* Single Cars */
+
+.mainContainer {
+  padding: 50px;
+}
+
+.paperContainer {
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+}
+
+#carName {
+  margin-left: 20px;
+}
+
+.chipList {
+  display: flex;
+  flex-wrap: wrap;
+}

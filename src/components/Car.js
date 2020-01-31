@@ -4,21 +4,21 @@ import { Container, Paper, Chip } from "@material-ui/core";
 
 const Car = props => {
   const id = parseInt(props.match.params.id);
-  const car = cars.filter(car => car.id === id);
-
+  const car = cars.find(car => car.id === id);
   return (
     <div>
-      <ul>
-        <Container>
-          <Paper>
-            {Object.entries(...car).map(([key, value], index) => (
-              <li key={index}>
-            <Chip label={`${key}: ${value}`}/>
+      <Container fixed="true" maxWidth="sm" className='mainContainer' >
+        <Paper className="paperContainer">
+          <h1 id="carName">{car.Name}</h1>
+          <ul className="chipList">
+            {Object.entries(car).map(([key, value]) => (
+              <li key={key}>
+                <Chip label={`${key}: ${value}`} />
               </li>
             ))}
-          </Paper>
-        </Container>
-      </ul>
+          </ul>
+        </Paper>
+      </Container>
     </div>
   );
 };
